@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Personal </title>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Boostrap Core CSS-->
+        <link rel="stylesheet" href="bootstrap.min.css"> 
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="style.css">
+        
+        <!-- Animate CSS -->
+        <link href="animate.css" rel="stylesheet">
+        
+        <!-- Google fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Qwigley" />
+        <!-- Font awesome -->
+        <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    
+    <style>
+        /* Styling for the modal (popup) */
+        .modal-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 80%;
+            z-index: 1000;
+        }
+
+        .modal-message p {
+            font-size: 18px;
+        }
+
+        .modal-message.success {
+            border-color: green;
+            background-color: #e8f8e8;
+        }
+
+        .modal-message.error {
+            border-color: red;
+            background-color: #f8e8e8;
+        }
+
+        /* Overlay background */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start wrapper -->
+    <div class="wrapper">
+        <div class="col-md-12">
+            <!-- Logo -->
+            <div class="brand wow fadeIn" data-wow-delay="0.1s"> Manita Gurung
+                <div class="title"> - Profile -  </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand"><a href="#">Manita Gurung</a>
+                        <div class="title"> - Profile - </div>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="Hobby.html">Hobby</a></li>
+                        <li><a href="Memories.html">Collections</a></li>
+                        <li><a href="resume.html">Education</a></li>
+                        <li><a href="Recommendation.html">Recommendation</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Start margin -->
+            <div class="margin-contact">
+                <!-- Start left column -->
+                <div class="box-contact col-md-4 col-xs-offset-1">
+                    <h3 class="heading-inner">Get in touch</h3>
+                    <div class="hr"></div>
+                    <div id="contact-area">
+                        <form id="contact-form" method="post" onsubmit="return validateForm(event)">
+                            <label for="Name">Name:</label>
+                            <input type="text" name="Name" id="Name" />
+                            <label for="Email">Email:</label>
+                            <input type="email" name="Email" id="Email" />
+                            <label for="Message">Message:</label><br />
+                            <textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+                            <input type="submit" name="submit" value="Submit" class="submit-button" />
+                        </form>
+                    </div>
+                    <h6><strong>Address:</strong> Sherubtse College
+                        <span><strong>Phone number:</strong> 77812851</span>
+                        <span><strong>Email: </strong><a href="mailto:manitag024@gmail.com">manitag024@gmail.com</a></span>
+                    </h6>
+                </div>
+                <!-- End left column -->
+
+                <!-- Start right image -->
+                <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                    <img src="sherubtse.jpg" alt="sherubtse " class="photo-contact"/> 
+                </div>
+                <!-- End right image -->
+            </div>
+            <!-- End margin -->
+            
+            <!-- Google Map Embed -->
+            <div class="col-md-12 wow fadeIn" data-wow-delay="0.1s">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994855.406116666!2d88.723274381441!3d27.514162666203104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e19416a280b567%3A0x8a133d8f08708b37!2sKanglung%2C%20Bhutan!5e0!3m2!1sen!2sbg!4v1690898321557"
+                width="100%" 
+                height="380" 
+                frameborder="0" 
+                style="border:0" 
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <!-- Start footer -->
+            <div class="footer">
+                <a href="https://www.facebook.com/manita.gurung.3701"><i class="fab fa-facebook"></i></a>
+                <a href="https://x.com/manita_g024"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/_manita.g/"><i class="fab fa-instagram"></i></a>
+            </div>
+            <!-- End footer -->
+
+        </div>
+        <!-- End col-md-12 -->
+
+    </div>
+    <!-- End wrapper -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="jquery-1.11.0.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="bootstrap.min.js"></script>
+    <!-- Smooth scroll JS -->
+    <script src="smoothscroll.js"></script>
+    
+    <!-- Wow JavaScript -->
+    <script src="wow.js"></script>
+
+    <script>
+        // JavaScript for form submission and validation
+        function validateForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Retrieve the form field values
+            var name = document.getElementById("Name").value;
+            var email = document.getElementById("Email").value;
+            var message = document.getElementById("Message").value;
+
+            // Get the modal and overlay elements
+            var modal = document.getElementById("modal-message");
+            var overlay = document.getElementById("overlay");
+
+            // Check if all fields are filled
+            if (name === "" || email === "" || message === "") {
+                // Show error message in the modal
+                modal.classList.add("error");
+                modal.classList.remove("success");
+                modal.innerHTML = "<p>Please fill all the fields!</p>";
+            } else {
+                // Show success message in the modal
+                modal.classList.add("success");
+                modal.classList.remove("error");
+                modal.innerHTML = "<p>Thank you for your message!</p>";
+                document.getElementById("contact-form").reset(); // Reset the form after submission
+            }
+
+            // Display the modal and overlay
+            overlay.style.display = "block";
+            modal.style.display = "block";
+
+            // Hide the modal after 3 seconds
+            setTimeout(function() {
+                modal.style.display = "none";
+                overlay.style.display = "none";
+            }, 3000);
+        }
+    </script>
+
+    <!-- Modal and overlay elements -->
+    <div id="overlay" class="overlay"></div>
+    <div id="modal-message" class="modal-message"></div>
+</body>
+
+</html>
